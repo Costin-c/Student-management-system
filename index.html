@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+            <span>渡一教育</span>
+        </div>
+    </div>
+
+    <div class="left-menu">
+        <dl>
+            <dt>学生管理</dt>
+            <dd class="active" data-id="list">学生列表</dd>
+            <dd data-id="add">新增学生</dd>
+        </dl>
+    </div>
+    <div class="right-content">
+
+        <div class="student-list" id="list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>邮箱</th>
+                        <th>年龄</th>
+                        <th>手机号</th>
+                        <th>住址</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>100000</td>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>879556412@qq.com</td>
+                        <td>20</td>
+                        <td>1635415646</td>
+                        <td>北京</td>
+                        <td>
+                            <button class="edit btn">编辑</button>
+                            <button class="remove btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>100000</td>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>879556412@qq.com</td>
+                        <td>20</td>
+                        <td>1635415646</td>
+                        <td>北京asdasddss</td>
+                        <td>
+                            <button class="edit btn">编辑</button>
+                            <button class="remove btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>100000</td>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>879556412@qq.com</td>
+                        <td>20</td>
+                        <td>1635415646</td>
+                        <td>北京</td>
+                        <td>
+                            <button class="edit btn">编辑</button>
+                            <button class="remove btn">删除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="modal">
+                <div class="modal-content">
+                    <h2>编辑信息</h2>
+                    <form class="student-form" id="edit-student-form">
+                        <div>
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" autocomplete="off">
+                        </div>
+                        <div>
+                            <label for="sex">性别</label>
+                            <input type="radio" id="male" name="sex" checked>
+                            <label class="sex" for="male">男</label>
+                            <input type="radio" id="female" name="sex">
+                            <label class="sex" for="female">女</label>
+                        </div>
+                        <div>
+                            <label for="email">邮箱</label>
+                            <input type="text" autocomplete="off" id="email" name="email">
+                        </div>
+                        <div>
+                            <label for="number">学号</label>
+                            <input type="text" autocomplete="off" id="number" name="sNo">
+                        </div>
+                        <div>
+                            <label for="birthYear">出生年份</label>
+                            <input type="text" autocomplete="off" id="birthYear" name="birth">
+                        </div>
+                        <div>
+                            <label for="phone">手机号</label>
+                            <input type="text" autocomplete="off"  id="phone" name="phone">
+                        </div>
+                        <div>
+                            <label for="address">住址</label>
+                            <input type="text" autocomplete="off" id="address" name="address">
+                        </div>
+                        <div>
+                            <label for=""></label>
+                            <button class="btn" id="edit-student-btn">提交</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="student-add" id="add">
+            <form class="student-form" id="add-student-form">
+                <div>
+                    <label for="add-name">姓名</label>
+                    <input type="text" id="add-name" name="name" autocomplete="off">
+                </div>
+                <div>
+                    <label for="sex">性别</label>
+                    <input type="radio" id="add-male" name="sex" checked>
+                    <label class="sex" for="add-male">男</label>
+                    <input type="radio" id="add-female" name="sex">
+                    <label class="sex" for="add-female">女</label>
+                </div>
+                <div>
+                    <label for="add-email">邮箱</label>
+                    <input type="text" autocomplete="off" id="add-email" name="email">
+                </div>
+                <div>
+                    <label for="add-number">学号</label>
+                    <input type="text" autocomplete="off" id="add-number" name="sNo">
+                </div>
+                <div>
+                    <label for="add-birthYear">出生年份</label>
+                    <input type="text" autocomplete="off" id="add-birthYear" name="birth">
+                </div>
+                <div>
+                    <label for="add-phone">手机号</label>
+                    <input type="text" autocomplete="off"  id="add-phone" name="phone">
+                </div>
+                <div>
+                    <label for="add-address">住址</label>
+                    <input type="text" autocomplete="off" id="add-address" name="address">
+                </div>
+                <div>
+                    <label for=""></label>
+                    <button class="btn" id="edit-student-btn">提交</button>
+                    <input type="reset" class="btn" value="重置">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
